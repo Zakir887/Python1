@@ -12,15 +12,15 @@ a = []
 for u in range(n):
     a.append([int(m) for m in input().split()])
 
-max = a[0][0]
+mx = a[0][0]
 ind_i = 0
 ind_j = 0
 x = 0
 for i in range(len(a)):
     for j in range(len(a[i])):
         x = a[i][j]
-        if int(x) > max:
+        if int(x) > mx:
             ind_i = i
             ind_j = j
-            max = x
+            mx = x
 print(ind_i, ind_j)
