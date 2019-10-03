@@ -14,12 +14,7 @@
 
 
 N, k = [int(i) for i in input().split()]
-year = set()
 strike = set()
-res = set()
-for i in range(1, N + 1):
-    if i % 6 != 0 and i % 7 != 0:
-        year.add(i)
 
 for i in range(k):
     a_i, b_i = [int(i) for i in input().split()]
@@ -27,5 +22,4 @@ for i in range(k):
         if j % 6 != 0 and j % 7 != 0:
             strike.add(j)
 
-res = year & strike
-print(len(res))
+print(len(strike))

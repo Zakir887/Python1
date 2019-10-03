@@ -14,19 +14,19 @@
 # возрастания, все числа, которые мог загадать Август после ответа на все вопросы Беатрисы.
 
 n = int(input())
-all = set(range(1, n + 1))
+all_n = set(range(1, n + 1))
 while True:
     s = input()
     if s == 'HELP':
         break
     s = {int(i) for i in s.split()}
 
-    if len(all & s) > len(all) / 2:
+    if len(all_n & s) > len(all_n) / 2:
         print('YES')
-        all.intersection_update(s)
+        all_n.intersection_update(s)
 
-    elif len(all & s) <= len(all):
+    else:
         print('NO')
-        all.intersection_update(all - s)
+        all_n.intersection_update(all_n - s)
 
-print(*sorted(all))
+print(*sorted(all_n))

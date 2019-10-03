@@ -8,7 +8,7 @@
 # языков. Затем - количество языков, которые знает хотя бы один школьник, на следующих строках - список таких языков.
 # Языки нужно выводить в лексикографическом порядке, по одному на строке.
 
-all = set()
+all_n = set()
 n = int(input())
 M = []
 for i in range(n):
@@ -17,7 +17,7 @@ for i in range(n):
         s = input()
         one.add(s)
     M.append(one)
-all = set.intersection(*M)
+all_n = set.intersection(*M)
 one = set.union(*M)
-print(len(all), *sorted(all), sep='\n')
+print(len(all_n), *sorted(all_n), sep='\n')
 print(len(one), *sorted(one), sep='\n')

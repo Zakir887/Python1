@@ -9,7 +9,7 @@
 # Вы должны вывести через пробел, в порядке возрастания, все числа, которые мог задумать Август.
 
 n = int(input())
-all = set(range(1, n + 1))
+all_n = set(range(1, n + 1))
 while True:
     s = input()
     if s == 'HELP':
@@ -18,7 +18,7 @@ while True:
     answ = input()
 
     if answ == 'YES':
-        all.intersection_update(s)
+        all_n.intersection_update(s)
     elif answ == 'NO':
-        all.difference_update(s)
-print(*sorted(all))
+        all_n.difference_update(s)
+print(*sorted(all_n))
